@@ -1,8 +1,6 @@
 .calculator {
   width: 30%;
   height: 40vh;
-
-  /* background-color: green; */
   margin: 10% auto;
 }
 
@@ -21,7 +19,6 @@
 }
 
 .second {
-  /* background-color: red; */
   display: flex;
   width: 100%;
   gap: 1px;
@@ -31,6 +28,10 @@
   background-color: rgb(209, 204, 204);
   width: 25%;
   height: 16%;
+}
+
+.bigger {
+  width: 50%;
 }
 
 .orange {
