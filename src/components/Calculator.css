@@ -1,0 +1,51 @@
+.calculator {
+  width: 30%;
+  height: 40vh;
+  margin: 10% auto;
+}
+
+.top {
+  display: flex;
+  background-color: grey;
+  height: 16%;
+  justify-content: end;
+  align-items: center;
+}
+
+.top p {
+  color: white;
+  font-size: 20px;
+  margin-right: 3px;
+}
+
+.second {
+  display: flex;
+  width: 100%;
+  gap: 1px;
+}
+
+.light_grey {
+  background-color: rgb(209, 204, 204);
+  width: 25%;
+  height: 16%;
+}
+
+.bigger {
+  width: 50%;
+}
+
+.orange {
+  background-color: orange;
+  width: 25%;
+  height: 16%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.between {
+  height: 1px;
+}
