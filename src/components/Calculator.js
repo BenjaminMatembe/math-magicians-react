@@ -39,7 +39,6 @@ export default function Calculator() {
         <div className="second">
           <div className="light_grey center bigger"><p>0</p></div>
           <div className="light_grey center"><p>.</p></div>
-          {/* <div className="light_grey center"><p></p></div> */}
           <div className="orange center"><p>=</p></div>
         </div>
 
