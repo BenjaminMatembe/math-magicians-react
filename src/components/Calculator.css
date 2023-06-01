@@ -8,11 +8,9 @@
   display: flex;
   background-color: grey;
   height: 16%;
+  width: 100%;
   justify-content: end;
   align-items: center;
-}
-
-.top p {
   color: white;
   font-size: 20px;
   margin-right: 3px;
@@ -28,6 +26,12 @@
   background-color: rgb(209, 204, 204);
   width: 25%;
   height: 16%;
+  border: none;
+}
+
+.light_grey:hover {
+  cursor: pointer;
+  background-color: rgb(217, 255, 0);
 }
 
 .bigger {
@@ -38,6 +42,12 @@
   background-color: orange;
   width: 25%;
   height: 16%;
+  border: none;
+}
+
+.orange:hover {
+  cursor: pointer;
+  background-color: orangered;
 }
 
 .center {

@@ -1,5 +1,16 @@
-export default function Heading() {
+import PropTypes from 'prop-types';
+
+function Heading({ value }) {
   return (
-    <h1>The Calculator</h1>
+    <>
+      <div className="">{value}</div>
+
+    </>
   );
 }
+
+Heading.propTypes = {
+  value: PropTypes.string.isRequired,
+};
+
+export default Heading;

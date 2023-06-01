@@ -1,45 +1,55 @@
+import React, { useState } from 'react';
+import calculate from './logic/calculator';
 import './Calculator.css';
-
-import CalculatorChild from './CalculatorChild';
+import Heading from './CalculatorChild';
 
 export default function Calculator() {
+  const [calculatingData, setCalculatingData] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
+
+  const handleClick = (nameOfButton) => {
+    setCalculatingData(calculate(calculatingData, nameOfButton));
+  };
   return (
     <>
-      <CalculatorChild />
+
       <div className="calculator">
-        <div className="top"><p>0</p></div>
+        <div className="top"><Heading value={calculatingData.next || calculatingData.total || '0'} /></div>
         <div className="second">
-          <div className="light_grey center"><p>AC</p></div>
-          <div className="light_grey center"><p>+/-</p></div>
-          <div className="light_grey center"><p>%</p></div>
-          <div className="orange center"><p>/</p></div>
+          <button type="button" className="light_grey center" onClick={() => handleClick('AC')}><p>AC</p></button>
+          <button type="button" className="light_grey center" onClick={() => handleClick('+/-')}><p>+/-</p></button>
+          <button type="button" className="light_grey center" onClick={() => handleClick('%')}><p>%</p></button>
+          <button type="button" className="orange center" onClick={() => handleClick('÷')}><p>÷</p></button>
         </div>
         <div className="between" />
         <div className="second">
-          <div className="light_grey center"><p>7</p></div>
-          <div className="light_grey center"><p>8</p></div>
-          <div className="light_grey center"><p>9</p></div>
-          <div className="orange center"><p>X</p></div>
+          <button type="button" className="light_grey center" onClick={() => handleClick('7')}><p>7</p></button>
+          <button type="button" className="light_grey center" onClick={() => handleClick('8')}><p>8</p></button>
+          <button type="button" className="light_grey center" onClick={() => handleClick('9')}><p>9</p></button>
+          <button type="button" className="orange center" onClick={() => handleClick('x')}><p>x</p></button>
         </div>
         <div className="between" />
         <div className="second">
-          <div className="light_grey center"><p>4</p></div>
-          <div className="light_grey center"><p>5</p></div>
-          <div className="light_grey center"><p>6</p></div>
-          <div className="orange center"><p>_</p></div>
+          <button type="button" className="light_grey center" onClick={() => handleClick('4')}><p>4</p></button>
+          <button type="button" className="light_grey center" onClick={() => handleClick('5')}><p>5</p></button>
+          <button type="button" className="light_grey center" onClick={() => handleClick('6')}><p>6</p></button>
+          <button type="button" className="orange center" onClick={() => handleClick('-')}><p>-</p></button>
         </div>
         <div className="between" />
         <div className="second">
-          <div className="light_grey center"><p>1</p></div>
-          <div className="light_grey center"><p>2</p></div>
-          <div className="light_grey center"><p>3</p></div>
-          <div className="orange center"><p>+</p></div>
+          <button type="button" className="light_grey center" onClick={() => handleClick('1')}><p>1</p></button>
+          <button type="button" className="light_grey center" onClick={() => handleClick('2')}><p>2</p></button>
+          <button type="button" className="light_grey center" onClick={() => handleClick('3')}><p>3</p></button>
+          <button type="button" className="orange center" onClick={() => handleClick('+')}><p>+</p></button>
         </div>
         <div className="between" />
         <div className="second">
-          <div className="light_grey center bigger"><p>0</p></div>
-          <div className="light_grey center"><p>.</p></div>
-          <div className="orange center"><p>=</p></div>
+          <button type="button" className="light_grey center bigger" onClick={() => handleClick('0')}><p>0</p></button>
+          <button type="button" className="light_grey center" onClick={() => handleClick('.')}><p>.</p></button>
+          <button type="button" className="orange center" onClick={() => handleClick('=')}><p>=</p></button>
         </div>
 
       </div>
