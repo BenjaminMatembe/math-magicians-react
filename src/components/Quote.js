@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-export default function QuoteComponent() {
+export default function Quotes() {
   const [quote, setQuote] = useState(null);
   const [error, setError] = useState(null);
   const [isloading, setIsLoading] = useState(true);
